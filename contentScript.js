@@ -1,13 +1,16 @@
 // This code is injected into the web page as a content script
 
 // Function to append a <style> element with custom scrollbar styles
+
+let title = document.querySelector("title");
+
 function addCustomScrollbarStyle() {
   const style = document.createElement("style");
   style.textContent = `
       
       /* Example: */
       ::-webkit-scrollbar {
-        width: 3px;
+        width: 4px;
         transition:width 0.3s ease-in-out;
         padding:3px;
       }
@@ -27,7 +30,7 @@ function addCustomScrollbarStyle() {
       }
     
     `;
-  document.head.appendChild(style);
+  document.head.insertBefore(style, title);
 }
 
 // Add custom scrollbar styles when the page is loaded
