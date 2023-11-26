@@ -8,11 +8,12 @@ function addCustomScrollbarStyle() {
   const scrollStyle = document.createElement("style");
   scrollStyle.textContent = `   
       ::-webkit-scrollbar {
-        width: 4px;
+        width: 2px;
+        height:2px;
         transition:width 0.3s ease-in-out;
       }
       ::-webkit-scrollbar:hover {
-        width: 5px;
+        width: 4px;
       }
       ::-webkit-scrollbar-thumb {
         background-color: #666;
