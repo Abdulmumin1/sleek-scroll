@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize UI</title>
+    <style>
+      /* :root {
+        --width: 10px;
+        --thumb-color: blue;
+        --track-color: orange;
+      } */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .container {
+        width: 80%;
+        max-width: 600px;
+        padding: 30px;
+        display: grid;
+        gap: 20px;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 0;
+        color: #333;
+      }
+      .settingsCon {
+        display: grid;
+        gap: 15px;
+      }
+      label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #555;
+      }
+      input[type="range"],
+      input[type="color"] {
+        width: 100%;
+      }
+      .preview {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        /* overflow-x: scroll; */
+        /* overflow-y: scroll; */
+
+        position: relative;
+      }
+      .preview:has(.overflow-x) {
+        overflow-x: scroll;
+      }
+      .preview:has(.overflow-y) {
+        overflow-y: scroll;
+      }
+      .preview::-webkit-scrollbar {
+        width: var(--width, 10px);
+      }
+      .preview::-webkit-scrollbar-thumb {
+        background-color: var(--thumb-color, #b794f4);
+      }
+      .preview::-webkit-scrollbar-track {
+        background-color: var(--track-color, #e9d8ff);
+      }
+
+      .preview::-webkit-scrollbar-corner {
+        width: 0;
+        height: 0;
+      }
+
+      .overflow-y {
+        height: 100vh;
+      }
+      .overflow-x {
+        width: 100vw;
+      }
+      .flex {
+        display: flex;
+        gap: 2px;
+      }
+
+      .custom-range {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(to right, #d6bcfa, #a78bfa);
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .custom-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #a78bfa;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .custom-button {
+        background-color: #a78bfa;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .custom-button:hover {
+        background-color: #d6bcfa;
+      }
+      .custom-button {
+        background-color: #a78bfa;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .custom-button:hover {
+        background-color: #d6bcfa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Customize UI</h1>
+      <div class="settingsCon">
+        <label for="width">
+          Width
+          <input
+            type="range"
+            name="width"
+            id="width"
+            min="0"
+            max="20"
+            value="10"
+            class="custom-range"
+          />
+        </label>
+        <label for="height">
+          Height
+          <input
+            type="range"
+            name="height"
+            id="height"
+            min="0"
+            max="20"
+            value="10"
+            class="custom-range"
+          />
+        </label>
+        <label for="height">
+          Border Radius
+          <input
+            type="range"
+            name="BorderR"
+            id="borderR"
+            min="0"
+            max="30"
+            value="0"
+            class="custom-range"
+          />
+        </label>
+
+        <label for="tr-color">
+          Track Color
+          <input type="color" name="tr-color" id="tr-color" value="#e9d8ff" />
+        </label>
+        <label for="tb-color">
+          Thumb Color
+          <input type="color" name="tb-color" id="tb-color" value="#b794f4" />
+        </label>
+        <button id="SaveSettings" class="custom-button">Save</button>
+      </div>
+      <div class="flex">
+        <div class="preview">
+          <div class="overflow-x"></div>
+        </div>
+        <div class="preview">
+          <div class="overflow-y"></div>
+        </div>
+      </div>
+    </div>
+    <script src="newtabscript.js"></script>
+  </body>
+</html>

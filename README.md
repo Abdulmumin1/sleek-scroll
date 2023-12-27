@@ -11,9 +11,15 @@ Enhance your browsing experience with custom-designed scrollbars using SleekScro
 ## Features
 
 - Escape the ugly scrollbars with ease.
-- Choose from a range of predefined themes or customize your own (coming soon ..).
+- Choose from a range of predefined themes or customize your own.
 - Enjoy a smooth and engaging scrolling experience.
 - Compatible with all Chromium-based browsers.
+
+![Cutomize](image/customizeSleekScroll.png)
+
+### Enjoy an experience that suits you better!
+
+![Cutomize](image/stackoverflowSleekScroll.png)
 
 ## Installation
 
@@ -46,3 +52,5 @@ For questions or support, you can reach out to [abdulmuminyqn@gmail.com](mailto:
 ## Acknowledgements
 
 SleekScroll was inspired by the desire to enhance my browsing experience, I couldn't stand the ugly default scrollbar anymore 🤢!
+
+I might be taking this too far 😅.
