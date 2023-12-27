@@ -10,9 +10,20 @@
     }
   ],
 
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
   "icons": {
     "48": "scroll-bar.png",
     "128": "scroll-bar.png"
-  }
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SleekScroll Config"
+  },
+  "tabs": [
+    {
+      "title": "SleekScroll",
+      "page": "newtab.html",
+      "icon": "scroll-bar.png"
+    }
+  ]
 }
